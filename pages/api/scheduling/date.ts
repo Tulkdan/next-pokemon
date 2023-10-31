@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type DateResponse = Array<string>
+export type TDateResponse = Array<string>
 
 function getDates(d1: number, d2: number): Array<Date> {
     var oneDay = 24 * 3600 * 1000;
@@ -12,7 +12,7 @@ function getDates(d1: number, d2: number): Array<Date> {
 
 export default function handler(
     req: NextApiRequest,
-    res: NextApiResponse<DateResponse>
+    res: NextApiResponse<TDateResponse>
 ) {
     const today = new Date();
     const nextWeek = today.getTime() * 1 + 7 * 24 * 3600 * 1000;

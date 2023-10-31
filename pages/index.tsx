@@ -13,7 +13,7 @@ export default function Home() {
 
         <div className='flex justify-center text-white w-full bg-pokemon-hero grow items-center bg-no-repeat bg-cover bg-center'>
           <div className='font-extrabold text-3xl max-w-xl text-center align-middle'>
-            Cuidamos bem do seu pokemon, para ele cuidar bem de voce
+            Cuidamos bem do seu pokémon, para ele cuidar bem de você
           </div>
         </div>
 

@@ -24,7 +24,7 @@ export default function HeaderComponent() {
             Quem Somos
           </div>
         </Link>
-        <Link href="">
+        <Link href="/schedule">
           <Pill>
             Agendar Consulta
           </Pill>

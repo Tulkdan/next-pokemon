@@ -1,0 +1,1 @@
+export const formatToCurrency = (value: number) => value.toLocaleString("pt-BR", { minimumFractionDigits: 2, style: 'currency', currency: 'brl' })

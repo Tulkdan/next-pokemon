@@ -1,8 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
+export type TTimeResponse = Array<string>
+
 export default function handler(
     req: NextApiRequest,
-    res: NextApiResponse<Array<String>>
+    res: NextApiResponse<TTimeResponse>
 ) {
     if (req.method !== 'POST') {
         res.status(405).end()
