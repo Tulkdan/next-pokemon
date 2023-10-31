@@ -6,7 +6,7 @@ import { TDateResponse } from '../../pages/api/scheduling/date';
 import { TTimeResponse } from '../../pages/api/scheduling/time';
 import { useRouter } from 'next/router';
 
-type TPayload = {
+export type TPayload = {
   name: string;
   secondName: string;
   region: string;
@@ -72,12 +72,15 @@ export default function ScheduleHook() {
 
     const randomNumber = Math.round(Math.random() * 10);
 
+    sessionStorage.removeItem("successSubmit");
+
     if (randomNumber % 2 === 0) {
-      router.push("/submit/success");
+      sessionStorage.setItem("successSubmit", JSON.stringify(payload));
+      router.push("/submit");
       return
     }
 
-    router.push("/submit/error");
+    router.push("/submit");
   }
 
   useEffect(() => {

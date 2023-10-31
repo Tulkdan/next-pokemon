@@ -3,6 +3,7 @@ import Head from 'next/head'
 import PageInfo from '../src/components/PageInfo'
 import InputBase from '../src/components/Inputs/Base'
 import InputSelect from '../src/components/Inputs/Select'
+import Button from '../src/components/Button';
 
 import ScheduleHook from '../src/hooks/schedule';
 import { formatToCurrency } from '../src/utils/formatToCurrency';
@@ -118,9 +119,9 @@ export default function AboutPage() {
                   </div>
                 );
               })}
-              <button className="rounded-3xl border border-solid border-black bg-white text-sm items-center py-2.5 px-3.5 hover:border-red-600 hover:text-white hover:bg-red-600" onClick={addPokemonToList}>
+              <Button onClick={addPokemonToList} alt="secondary">
                 Adicionar novo pokémon ao time...
-              </button>
+              </Button>
             </div>
 
             <div className="flex gap-x-6 mt-12">
@@ -187,9 +188,9 @@ export default function AboutPage() {
                   Valor Total: {formatToCurrency(total)}
                 </span>
 
-                <button className="rounded-3xl border border-solid text-sm text-white bg-red-600 py-2.5 px-3.5" onClick={submit}>
+                <Button onClick={submit}>
                   Concluir Agendamento
-                </button>
+                </Button>
               </div>
             </div>
           </div>
